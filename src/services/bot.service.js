@@ -193,6 +193,106 @@ const extractIntent = (message) => {
     return "CART";
   }
 
+  // Add to Cart Intent - detect when user wants to add a plan to cart
+  if (
+    (msg.includes("add to cart") || msg.includes("add cart") || msg.includes("add plan")) &&
+    (msg.includes("cheapest") || msg.includes("cheap") || msg.includes("lowest") ||
+     msg.includes("4g") || msg.includes("4 g") || msg.includes("four g") ||
+     msg.includes("voice") || msg.includes("data") || msg.includes("backup") ||
+     msg.includes("plan"))
+  ) {
+    return "ADD_TO_CART";
+  }
+
+  // View Cart Contents
+  if (
+    msg.includes("view cart") ||
+    msg.includes("show cart") ||
+    msg.includes("my cart") ||
+    msg.includes("cart items") ||
+    msg.includes("what's in my cart") ||
+    (msg.includes("cart") && (msg.includes("view") || msg.includes("show") || msg.includes("see")))
+  ) {
+    return "VIEW_CART";
+  }
+
+  // Browse Plans by Category
+  if (
+    msg.includes("browse") ||
+    msg.includes("show plans") ||
+    msg.includes("view plans") ||
+    msg.includes("list plans") ||
+    msg.includes("available plans") ||
+    (msg.includes("plans") && (msg.includes("voice") || msg.includes("data") || msg.includes("4g") || msg.includes("backup")))
+  ) {
+    return "BROWSE_PLANS";
+  }
+
+  // Plan Details
+  if (
+    msg.includes("plan details") ||
+    msg.includes("plan info") ||
+    msg.includes("tell me about") ||
+    msg.includes("what is") ||
+    (msg.includes("plan") && (msg.includes("detail") || msg.includes("info") || msg.includes("feature")))
+  ) {
+    return "PLAN_DETAILS";
+  }
+
+  // Compare Plans
+  if (
+    msg.includes("compare") ||
+    msg.includes("difference between") ||
+    msg.includes("which is better") ||
+    (msg.includes("plan") && msg.includes("compare"))
+  ) {
+    return "COMPARE_PLANS";
+  }
+
+  // Order History
+  if (
+    msg.includes("order history") ||
+    msg.includes("past orders") ||
+    msg.includes("previous orders") ||
+    msg.includes("my orders") ||
+    (msg.includes("order") && msg.includes("history"))
+  ) {
+    return "ORDER_HISTORY";
+  }
+
+  // Clear Cart
+  if (
+    msg.includes("clear cart") ||
+    msg.includes("empty cart") ||
+    msg.includes("remove all") ||
+    msg.includes("delete cart") ||
+    (msg.includes("cart") && (msg.includes("clear") || msg.includes("empty") || msg.includes("delete all")))
+  ) {
+    return "CLEAR_CART";
+  }
+
+  // Cart Total
+  if (
+    msg.includes("cart total") ||
+    msg.includes("total price") ||
+    msg.includes("how much") ||
+    (msg.includes("cart") && msg.includes("total")) ||
+    (msg.includes("cart") && msg.includes("cost"))
+  ) {
+    return "CART_TOTAL";
+  }
+
+  // Plan Recommendation
+  if (
+    msg.includes("recommend") ||
+    msg.includes("suggest") ||
+    msg.includes("which plan") ||
+    msg.includes("best plan") ||
+    (msg.includes("plan") && (msg.includes("recommend") || msg.includes("suggest") || msg.includes("best")))
+  ) {
+    return "PLAN_RECOMMENDATION";
+  }
+
   // Notifications
   if (
     msg.includes("notification") ||

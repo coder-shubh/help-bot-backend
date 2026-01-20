@@ -327,6 +327,131 @@ module.exports = {
       "Items stay in cart until you complete purchase or remove them."
   },
 
+  ADD_TO_CART: {
+    intent: "ADD_TO_CART",
+    reply: "ADD_TO_CART_ACTION", // Special marker for frontend to handle
+    // The frontend will parse the user message to determine which plan to add
+  },
+
+  VIEW_CART: {
+    intent: "VIEW_CART",
+    reply: "VIEW_CART_ACTION", // Special marker for frontend to handle
+  },
+
+  BROWSE_PLANS: {
+    intent: "BROWSE_PLANS",
+    reply: "📱 **Browse Plans**\n\n" +
+      "We offer three main categories of plans:\n\n" +
+      "**1. Voice + Data Plans** 📞\n" +
+      "• Business Essential - $30/month (25GB)\n" +
+      "• Business Everyday - $40/month (50GB)\n" +
+      "• Business Best Value - $55/month (120GB)\n" +
+      "• Business Max - $85/month (400GB)\n\n" +
+      "**2. Data Only Plans** 📶\n" +
+      "• Data Essential - $20/month (30GB)\n" +
+      "• Data Plus - $35/month (80GB)\n" +
+      "• Data Unlimited - $60/month (200GB)\n\n" +
+      "**3. 4G Backup Plans** 🔄\n" +
+      "• 4G Backup Basic - $15/month (10GB)\n" +
+      "• 4G Backup Standard - $25/month (25GB)\n" +
+      "• 4G Backup Premium - $40/month (50GB)\n\n" +
+      "Would you like to:\n" +
+      "• View details of a specific plan?\n" +
+      "• Compare plans?\n" +
+      "• Get a recommendation?\n" +
+      "• Add a plan to cart?"
+  },
+
+  PLAN_DETAILS: {
+    intent: "PLAN_DETAILS",
+    reply: "PLAN_DETAILS_ACTION", // Special marker for frontend to handle
+  },
+
+  COMPARE_PLANS: {
+    intent: "COMPARE_PLANS",
+    reply: "📊 **Compare Plans**\n\n" +
+      "Here's a quick comparison:\n\n" +
+      "**Voice + Data Plans:**\n" +
+      "• Essential ($30) - Best for light users (25GB)\n" +
+      "• Everyday ($40) - Good balance (50GB)\n" +
+      "• Best Value ($55) - Most popular (120GB)\n" +
+      "• Max ($85) - For heavy users (400GB)\n\n" +
+      "**Data Only Plans:**\n" +
+      "• Essential ($20) - Basic data (30GB)\n" +
+      "• Plus ($35) - Standard data (80GB)\n" +
+      "• Unlimited ($60) - High data (200GB)\n\n" +
+      "**4G Backup Plans:**\n" +
+      "• Basic ($15) - Minimal backup (10GB)\n" +
+      "• Standard ($25) - Standard backup (25GB)\n" +
+      "• Premium ($40) - Premium backup (50GB)\n\n" +
+      "All plans include:\n" +
+      "• 5G/4G network access\n" +
+      "• Shared data across services\n" +
+      "• No excess data fees\n" +
+      "• Throttled speeds after limit\n\n" +
+      "Which plans would you like to compare in detail?"
+  },
+
+  ORDER_HISTORY: {
+    intent: "ORDER_HISTORY",
+    reply: "📦 **Order History**\n\n" +
+      "To view your order history:\n\n" +
+      "**Steps:**\n" +
+      "1. Go to Store tab\n" +
+      "2. Tap on Order History\n" +
+      "3. View all your past orders\n\n" +
+      "**What You Can See:**\n" +
+      "• Order date and time\n" +
+      "• Order number\n" +
+      "• Items purchased\n" +
+      "• Order status\n" +
+      "• Total amount\n" +
+      "• Delivery status\n\n" +
+      "**Order Status:**\n" +
+      "• Pending - Order is being processed\n" +
+      "• Confirmed - Order confirmed\n" +
+      "• Shipped - Order has been shipped\n" +
+      "• Delivered - Order delivered\n" +
+      "• Cancelled - Order cancelled\n\n" +
+      "Tap any order to see detailed information!"
+  },
+
+  CLEAR_CART: {
+    intent: "CLEAR_CART",
+    reply: "CLEAR_CART_ACTION", // Special marker for frontend to handle
+  },
+
+  CART_TOTAL: {
+    intent: "CART_TOTAL",
+    reply: "CART_TOTAL_ACTION", // Special marker for frontend to handle
+  },
+
+  PLAN_RECOMMENDATION: {
+    intent: "PLAN_RECOMMENDATION",
+    reply: "💡 **Plan Recommendations**\n\n" +
+      "Based on your needs, here are my recommendations:\n\n" +
+      "**For Light Users (under 25GB/month):**\n" +
+      "• Business Essential ($30) - Voice + Data\n" +
+      "• Data Essential ($20) - Data Only\n" +
+      "• 4G Backup Basic ($15) - Backup only\n\n" +
+      "**For Average Users (25-50GB/month):**\n" +
+      "• Business Everyday ($40) - Voice + Data\n" +
+      "• Data Plus ($35) - Data Only\n" +
+      "• 4G Backup Standard ($25) - Backup\n\n" +
+      "**For Heavy Users (50GB+/month):**\n" +
+      "• Business Best Value ($55) - Voice + Data\n" +
+      "• Data Unlimited ($60) - Data Only\n" +
+      "• Business Max ($85) - Voice + Data (400GB)\n\n" +
+      "**Best Value:**\n" +
+      "• Business Best Value ($55) - Most popular, great features\n\n" +
+      "**Cheapest Option:**\n" +
+      "• 4G Backup Basic ($15) - Minimal backup plan\n\n" +
+      "Would you like to:\n" +
+      "• See details of a specific plan?\n" +
+      "• Add a recommended plan to cart?\n" +
+      "• Compare plans?"
+  },
+
   // Notifications
   NOTIFICATIONS: {
     intent: "NOTIFICATIONS",
